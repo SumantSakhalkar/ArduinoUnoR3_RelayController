@@ -42,12 +42,10 @@ Click **Disconnect** to release the port. The Arduino Serial Monitor and this ap
 
 Each row has:
 
-| Control | Action |
-|---|---|
-| **State box** | Gray `?` when unknown, green `ON`, or red `OFF`. Shows the relay's current state as reported by the Uno. |
-| **ON** | Turns the relay on, shorting the pad to GND. |
-| **OFF** | Turns the relay off, releasing the pad. |
-| **Toggle** | Switches the relay to the opposite state. |
+- **State box:** gray `?` = unknown, green `ON`, red `OFF`
+- **ON:** turns the relay on (pad shorted to GND)
+- **OFF:** turns the relay off (pad released)
+- **Toggle:** switches to the opposite state
 
 The status bar at the bottom shows the last reply, for example `Connected - WATCHDOG is ON`.
 
@@ -63,14 +61,12 @@ Check the Hydra board's documentation for the exact order and timing. Only short
 
 ## 7. Troubleshooting
 
-| What you see | What to do |
-|---|---|
-| "No serial port selected." | Plug in the Uno and click **Refresh**, then select the port. |
-| "Could not open COMx" | Close the Arduino Serial Monitor or any other app using the port. Then click **Connect** again. |
-| Status stays at "Connecting... (waiting for Uno reset)" | Click **Disconnect**, then **Connect**. Confirm the firmware is uploaded. |
-| `Write failed: ...` in the status bar | The Uno was unplugged or the port is in use. Reconnect the Uno and click **Connect**. |
-| `Arduino: ERR ...` in the status bar | The firmware did not recognize the command. Check that the firmware version matches the app. |
-| Relay clicks but the pad does not change | Check the COM and NO wiring and the relay board's LED for that channel. |
+- **"No serial port selected.":** plug in the Uno, click **Refresh**, and select the port.
+- **"Could not open COMx":** close the Arduino Serial Monitor or other app using the port, then click **Connect**.
+- **Stuck on "Connecting... (waiting for Uno reset)":** click **Disconnect**, then **Connect**. Confirm the firmware is uploaded.
+- **`Write failed: ...`:** the Uno was unplugged or the port is in use. Reconnect and click **Connect**.
+- **`Arduino: ERR ...`:** the firmware did not recognize the command. Check that the firmware matches the app version.
+- **Relay clicks but the pad does not change:** check the COM and NO wiring and the channel's LED on the relay board.
 
 ## 8. Closing the app
 
